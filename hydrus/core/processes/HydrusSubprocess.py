@@ -152,7 +152,7 @@ def GetSubprocessKWArgs( text = False, text_encoding = 'utf-8', this_is_a_potent
         
     
     if HC.PLATFORM_WINDOWS and not DO_HIDE_TERMINAL_TEST and not this_is_a_potentially_long_lived_external_guy:
-
+        
         # long-lived guys are external viewers etc., and DETACHED_PROCESS below already stops a terminal from popping up
         # SW_HIDE here would hide the window of any GUI program that respects it, like IrfanView
         sbp_kwargs[ 'startupinfo' ] = GetSubprocessHideTerminalStartupInfo()
